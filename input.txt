@@ -1,0 +1,3 @@
+squirrel 100 200 ForestSquirrel
+druid 150 250 WiseDruid
+orc 200 300 BattleOrc

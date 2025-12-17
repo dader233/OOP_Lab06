@@ -1,0 +1,6 @@
+orc(10 20) [Grom]
+squirrel(15 25) [Chip]
+druid(30 40) [Malfurion]
+squirrel(100 200) [ForestSquirrel]
+druid(150 250) [WiseDruid]
+orc(200 300) [BattleOrc]
