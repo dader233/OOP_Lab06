@@ -4,7 +4,6 @@
 #include <cctype>
 #include <algorithm>
 
-// Вспомогательная функция для приведения строки к нижнему регистру
 std::string to_lower(const std::string &str) {
     std::string result = str;
     std::transform(result.begin(), result.end(), result.begin(),
@@ -14,7 +13,6 @@ std::string to_lower(const std::string &str) {
 
 std::shared_ptr<Npc> FactoryNpc::create_npc(const TypeNpc &type, const std::string &name, 
                                            unsigned int x, unsigned int y) {
-    // Проверка координат
     if (x > 500 || y > 500) {
         throw std::invalid_argument("Coordinates must be between 0 and 500");
     }
@@ -40,12 +38,10 @@ std::shared_ptr<Npc> FactoryNpc::create_npc_from_file(std::ifstream &in) {
     std::string type_str;
     in >> type_str;
     
-    // Если достигнут конец файла
     if (in.eof()) {
         throw std::runtime_error("End of file reached");
     }
     
-    // Читаем координаты и имя
     unsigned int x, y;
     std::string name;
     
@@ -55,10 +51,8 @@ std::shared_ptr<Npc> FactoryNpc::create_npc_from_file(std::ifstream &in) {
         throw std::runtime_error("Failed to read NPC data from file");
     }
     
-    // Преобразуем строку типа к нижнему регистру для удобства сравнения
     type_str = to_lower(type_str);
     
-    // Определяем тип NPC
     TypeNpc type;
     if (type_str == "orc") {
         type = TypeNpc::orc;
@@ -70,6 +64,5 @@ std::shared_ptr<Npc> FactoryNpc::create_npc_from_file(std::ifstream &in) {
         throw std::invalid_argument("Unknown NPC type in file: '" + type_str + "'");
     }
     
-    // Создаем NPC
     return create_npc(type, name, x, y);
 }
