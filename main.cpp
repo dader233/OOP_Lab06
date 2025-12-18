@@ -70,22 +70,22 @@ int main() {
         std::cout << "================ Combat Rules Test ================\n\n";
         
         std::cout << "1. Orc attacks Druid: ";
-        std::cout << (orc_ptr->accept(druid_ptr) ? "Orc KILLS Druid ✓" : "Orc does NOT kill Druid") << '\n';
+        std::cout << (orc_ptr->accept(druid_ptr) ? "Orc KILLS Druid RIGHT_VAR" : "Orc does NOT kill Druid") << '\n';
         
         std::cout << "2. Druid attacks Squirrel: ";
-        std::cout << (druid_ptr->accept(squirrel_ptr) ? "Druid KILLS Squirrel ✓" : "Druid does NOT kill Squirrel") << '\n';
+        std::cout << (druid_ptr->accept(squirrel_ptr) ? "Druid KILLS Squirrel RIGHT_VAR" : "Druid does NOT kill Squirrel") << '\n';
         
         std::cout << "3. Squirrel attacks Orc: ";
-        std::cout << (squirrel_ptr->accept(orc_ptr) ? "Squirrel KILLS Orc" : "Squirrel does NOT kill Orc (peaceful) ✓") << '\n';
+        std::cout << (squirrel_ptr->accept(orc_ptr) ? "Squirrel KILLS Orc" : "Squirrel does NOT kill Orc (peaceful) RIGHT_VAR") << '\n';
         
         std::cout << "4. Orc attacks Squirrel: ";
-        std::cout << (orc_ptr->accept(squirrel_ptr) ? "Orc KILLS Squirrel" : "Orc does NOT kill Squirrel ✓") << '\n';
+        std::cout << (orc_ptr->accept(squirrel_ptr) ? "Orc KILLS Squirrel" : "Orc does NOT kill Squirrel RIGHT_VAR") << '\n';
         
         std::cout << "5. Druid attacks Orc: ";
-        std::cout << (druid_ptr->accept(orc_ptr) ? "Druid KILLS Orc" : "Druid does NOT kill Orc ✓") << '\n';
+        std::cout << (druid_ptr->accept(orc_ptr) ? "Druid KILLS Orc" : "Druid does NOT kill Orc RIGHT_VAR") << '\n';
         
         std::cout << "6. Squirrel attacks Druid: ";
-        std::cout << (squirrel_ptr->accept(druid_ptr) ? "Squirrel KILLS Druid" : "Squirrel does NOT kill Druid (peaceful) ✓") << "\n\n";
+        std::cout << (squirrel_ptr->accept(druid_ptr) ? "Squirrel KILLS Druid" : "Squirrel does NOT kill Druid (peaceful) RIGHT_VAR") << "\n\n";
 
         // Тестирование Observer паттерна
         std::cout << "================ Observer Test ================\n\n";
